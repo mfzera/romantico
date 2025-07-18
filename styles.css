@@ -1,0 +1,104 @@
+/* Estilos gerais para o corpo da página */
+body {
+    /* Usando a fonte Montserrat para o texto geral */
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Um fundo suave, cor de base para o neomorfismo */
+    background-color: #f0f2f5; 
+    margin: 0;
+    overflow: hidden; /* Evita barras de rolagem quando o botão se move */
+}
+
+/* O contêiner principal da nossa aplicação */
+.container {
+    background-color: #f0f2f5;
+    border-radius: 30px;
+    padding: 40px 50px;
+    /* A sombra principal que cria o efeito de neomorfismo "extrusado" */
+    box-shadow: 20px 20px 60px #caced1, -20px -20px 60px #ffffff;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    position: relative; /* Necessário para posicionar o botão "Não" dentro dele */
+    transition: all 0.3s ease;
+}
+
+/* Estilo para o título principal (a pergunta) */
+h1 {
+    /* Usando a fonte "Dancing Script" para um toque elegante e romântico */
+    font-family: 'Dancing Script', cursive;
+    color: #e85d75; /* Um tom de rosa/vermelho romântico */
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Contêiner para os botões */
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 50px; /* Altura fixa para evitar que o layout pule */
+}
+
+/* Estilo base para os botões */
+button {
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    /* Sombra interna e externa para o efeito de neomorfismo */
+    box-shadow: 8px 8px 15px #caced1, -8px -8px 15px #ffffff;
+    transition: all 0.2s ease-in-out;
+    color: #5a6270;
+    background: #f0f2f5;
+    padding: 15px 30px;
+}
+
+/* Efeito ao pressionar o botão (neomorfismo "pressionado") */
+button:active {
+    box-shadow: inset 5px 5px 10px #caced1, inset -5px -5px 10px #ffffff;
+    transform: scale(0.98);
+}
+
+/* Estilo específico para o botão "Sim" */
+.yes-button {
+    background-color: #28a745; /* Verde para o sim */
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilo específico para o botão "Não" */
+.no-button {
+    position: absolute; /* Permite que ele seja posicionado livremente dentro do .container */
+    background-color: #dc3545; /* Vermelho para o não */
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilo para a mensagem final */
+.message {
+    margin-top: 40px;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 500;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animação de fade-in para a mensagem */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
